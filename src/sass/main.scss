@@ -6,10 +6,16 @@
 // Стили для файла с примером HTML-фрагмента
 
 // UTILS
-@import './base/drop';
+
+@import './utils/variables';
 @import './utils/mixin';
 
+// BASE
+
+@import './base/drop';
+
 // LAYOUT
+
 @import './layout/hero-header';
 @import './layout/products';
 @import './layout/about';
