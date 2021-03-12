@@ -1,0 +1,131 @@
+.header-btn {
+  @include font(700, 16px, 30px);
+  align-items: center;
+  text-align: center;
+  background-color: var(--white);
+  color: var(--accent-color);
+  border-radius: 22px;
+  cursor: pointer;
+  border: none;
+
+  display: inline-block;
+  min-width: 160px;
+  min-height: 44px;
+  padding-left: 37px;
+  padding-right: 37px;
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+}
+
+.hero-links-list {
+  display: flex;
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+.hero-links-list-link {
+  @include font(400, 14px, 18px);
+  line-height: 1.286;
+  align-items: center;
+  text-align: center;
+  background-color: var(--white);
+  color: var(--accent-color);
+  border-radius: 20px;
+  cursor: pointer;
+
+  display: inline-block;
+  min-width: 104px;
+  padding: 11px 22px;
+}
+
+.hero-links-list-item {
+  &:not(:last-child) {
+    margin-right: 15px;
+    background-color: var(--accent-color);
+    color: var(--white);
+  }
+
+  &:nth-child(2) .hero-links-list-link:hover,
+  .hero-links-list-link:focus {
+    background-color: #ecebeb;
+  }
+}
+
+.hero-round-btn {
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+  border: none;
+}
+
+.round-btn {
+  background-color: var(--white);
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+
+.about-btn {
+  @include font(700, 16px, 30px);
+  align-items: center;
+  text-align: center;
+  background-color: var(--white);
+  color: var(--accent-color);
+  border-radius: 22px;
+  cursor: pointer;
+  border: none;
+
+  display: inline-block;
+  min-width: 160px;
+  min-height: 44px;
+  padding-left: 37px;
+  padding-right: 37px;
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+}
+
+.contacts-btn {
+  @include font(700, 16px, 30px);
+  align-items: center;
+  text-align: center;
+  background-color: var(--white);
+  color: var(--accent-color);
+  border-radius: 22px;
+  cursor: pointer;
+  border: none;
+
+  display: inline-block;
+  min-width: 160px;
+  min-height: 44px;
+  padding-left: 37px;
+  padding-right: 37px;
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+}
+
+.contacts-btns-wrapper {
+  &:not(:last-child) {
+    margin-right: 15px;
+    background-color: var(--accent-color);
+    color: var(--white);
+  }
+
+  &:nth-child(2):hover,
+  &:nth-child(2):focus {
+    background-color: #ecebeb;
+  }
+}
