@@ -9,7 +9,29 @@
   border: none;
 
   display: inline-block;
-  min-width: 160px;
+  min-width: 209px;
+  min-height: 44px;
+  padding-left: 37px;
+  padding-right: 37px;
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+}
+
+.header-btn-tablet-modal {
+  @include font(700, 16px, 30px);
+  align-items: center;
+  text-align: center;
+  background-color: var(--white);
+  color: var(--accent-color);
+  border-radius: 22px;
+  cursor: pointer;
+  border: none;
+
+  display: inline-block;
+  min-width: 186px;
   min-height: 44px;
   padding-left: 37px;
   padding-right: 37px;
@@ -22,27 +44,27 @@
 
 .hero-links-list {
   display: flex;
-  &:not(:last-child) {
-    margin-right: 15px;
-  }
 }
 
 .hero-links-list-link {
-  @include font(400, 14px, 18px);
-  line-height: 1.286;
+  @include font(400, 8px, 10px);
   align-items: center;
   text-align: center;
-  background-color: var(--white);
-  color: var(--accent-color);
+
+  color: inherit;
+  background-color: inherit;
   border-radius: 20px;
   cursor: pointer;
 
   display: inline-block;
-  min-width: 104px;
-  padding: 11px 22px;
+  min-width: 62px;
+  padding: 11px;
 }
 
 .hero-links-list-item {
+  color: var(--accent-color);
+  background-color: var(--white);
+  border-radius: 20px;
   &:not(:last-child) {
     margin-right: 15px;
     background-color: var(--accent-color);
@@ -74,7 +96,7 @@
 }
 
 .about-btn {
-  @include font(700, 16px, 30px);
+  @include font(700, 14px, 38px);
   align-items: center;
   text-align: center;
   background-color: var(--white);
@@ -84,7 +106,7 @@
   border: none;
 
   display: inline-block;
-  min-width: 160px;
+  min-width: 176px;
   min-height: 44px;
   padding-left: 37px;
   padding-right: 37px;
@@ -111,15 +133,7 @@
   padding-left: 37px;
   padding-right: 37px;
 
-  &:hover,
-  &:focus {
-    background-color: #ecebeb;
-  }
-}
-
-.contacts-btns-wrapper {
   &:not(:last-child) {
-    margin-right: 15px;
     background-color: var(--accent-color);
     color: var(--white);
   }
@@ -127,5 +141,42 @@
   &:nth-child(2):hover,
   &:nth-child(2):focus {
     background-color: #ecebeb;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .contacts-btns-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contacts-btn {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-btn {
+    min-width: 160px;
+  }
+
+  .contacts-btn {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  .about-btn {
+    @include font(700, 16px, 21px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-links-list-link {
+    @include font(400, 14px, 18px);
+    min-width: 104px;
+    padding: 11px 22px;
   }
 }
