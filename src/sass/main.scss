@@ -9,7 +9,7 @@
 
 @import './utils/variables';
 @import './utils/mixin';
-
+@import './utils/visually-hidden';
 // BASE
 
 @import './base/container';
@@ -23,5 +23,6 @@
 @import './layout/about';
 @import './layout/advantages';
 @import './layout/gallery';
+@import './layout/customer-reviews';
 @import './layout/cont';
 @import './layout/footer';
