@@ -12,15 +12,13 @@
 
 .advantages-list-item-title {
   font-family: var(--titan-font);
-  @include font(400, 36px, 41px 0.04em);
+  @include font(400, 36px, 41px, 0.04em);
   text-transform: uppercase;
   color: var(--main-pink-color);
 }
 
 .advantages-list-item-description {
-  @include font(700, 12px, 170%);
-  font-size: 12px;
-  line-height: 170%;
+  @include font(700, 12px, 20px);
   color: var(--black);
 }
 
@@ -114,13 +112,13 @@
   }
 
   .advantages-list-item-title {
-    @include font(400, 48px, 55px 0.04em);
+    @include font(400, 48px, 55px, 0.04em);
 
     margin-bottom: 13px;
   }
 
   .advantages-list-item-description {
-    @include font(700, 14px, 174% 0.04em);
+    @include font(700, 14px, 24px, 0.04em);
   }
 }
 
@@ -140,12 +138,12 @@
   }
 
   .advantages-list-item-title {
-    @include font(400, 58px, 66px 0.04em);
+    @include font(400, 58px, 66px, 0.04em);
 
     margin-bottom: 13px;
   }
 
   .advantages-list-item-description {
-    @include font(700, 16px, 176% 0.02em);
+    @include font(700, 16px, 28px, 0.02em);
   }
 }

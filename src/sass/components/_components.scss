@@ -165,11 +165,11 @@
     margin-bottom: 10px;
   }
   .label {
-    @include font(400, 18px, 21px, 0.04);
+    @include font(400, 18px, 21px, 0.04em);
     color: var(--pink-text-color);
   }
   .title {
-    @include font(400, 34px, 39px, 0.04);
+    @include font(400, 34px, 39px, 0.04em);
     color: var(--main-pink-color);
   }
 }
@@ -193,7 +193,7 @@
     color: var(--pink-text-color);
   }
   .title {
-    @include font(400, 48px, 55px, 0.04);
+    @include font(400, 48px, 55px, 0.04em);
     color: var(--main-pink-color);
   }
 }
@@ -206,11 +206,11 @@
   }
 
   .label {
-    @include font(400, 30px, 34px, 0.04);
+    @include font(400, 30px, 34px, 0.04em);
     color: var(--pink-text-color);
   }
   .title {
-    @include font(400, 58px, 66px, 0.06);
+    @include font(400, 58px, 66px, 0.06em);
     color: var(--main-pink-color);
   }
 }
