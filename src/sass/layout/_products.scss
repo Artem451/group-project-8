@@ -2,15 +2,23 @@
 }
 .container {
 }
-.label {
+
+@media screen and (min-width: 320px) {
 }
-.title {
+
+@media screen and (min-width: 768px) {
 }
+
+@media screen and (min-width: 1200px) {
+}
+
 .products-list {
+  //   display: flex;
 }
 .products-list-item {
 }
 .product-name {
+  //   color: var(--white);
 }
 .product-description {
 }
