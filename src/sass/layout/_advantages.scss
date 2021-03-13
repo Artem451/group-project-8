@@ -120,7 +120,7 @@
   }
 
   .advantages-list-item-description {
-    @include font(700, 14px, 174%);
+    @include font(700, 14px, 174% 0.04em);
   }
 }
 
