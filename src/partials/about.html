@@ -1,17 +1,30 @@
 <section class="about-section">
     <div class="container">
-        <p class="label">tradition and love</p>
+        <p class="about-label">tradition and love</p>
         <h2 class="title">how it’s made?</h2>
         <div class="about-wrapper">
-            <picture>
-                <source srcset="">
-                <img src="" alt="">
-            </picture>
-            <div>
-                <b class="about-text-bold">
-                    Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros.
-                    Maecenas eleifend erat at justo fringilla.
-                </b>
+            <div class="about-image-wrapper">
+                <picture>
+                    <source srcset="./images/desktop/cow-about-desktop@1x.webp 1x, ./images/desktop/cow-about-desktop@2x.webp 2x"
+                        media="(min-width: 1050px)" type="image/webp">
+                    <source srcset="./images/desktop/cow-about-desktop@1x.png 1x, ./images/desktop/cow-about-desktop@2x.png 2x"
+                        media="(min-width: 1050px)">
+                    <source srcset="./images/tablet/cow-about-tablet@1x.webp 1x, ./images/tablet/cow-about-tablet@2x.webp 2x" 
+                        media="(min-width: 700px)" type="image/webp">
+                    <source srcset="./images/tablet/cow-about-tablet@1x.png 1x, ./images/tablet/cow-about-tablet@2x.png 2x"
+                        media="(min-width: 700px)">
+                    <source srcset="./images/mobile/cow-about-mobile@1x.webp 1x, ./images/mobile/cow-about-mobile@2x.webp 2x" type="image/webp">
+                    <source srcset="./images/mobile/cow-about-mobile@2x.png 2x">
+                    <img class="about-image" src="./images/mobile/cow-about-mobile@1x.png" alt="Сow">
+                </picture>
+            </div>
+            <div class="about-text-wrapper">
+                <p class="about-text">
+                    <b class="about-text-bold">
+                        Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros.
+                        Maecenas eleifend erat at justo fringilla.
+                    </b>
+                </p>
                 <p class="about-text">
                     Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat.
                     Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.

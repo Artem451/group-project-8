@@ -1,14 +1,60 @@
+.about-section {
+    padding-top: 125px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--section-background);
+    max-width: 1280px;
+    background-image: url(../images/desktop/milk-about-desktop@1x.png);
+    background-repeat: no-repeat;
+    background-position: 0px 342px;
+    background-size: contain;
+}
+
+// .label {   
+//     font-family: var(--titan-font);
+//     @include font(400, 30px, 34px, 0.04em);
+// }
+
+.about-label {
+    color: var(--pink-text-color);
+    font-family: var(--titan-font);
+    @include font(400, 30px, 34px, 0.04em);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.title {
+    color: var(--main-pink-color);
+    font-family: var(--titan-font);
+    @include font(400, 58px, 66px, 0.06em);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 106px;
+}
+
 .about-wrapper {
     display: flex;
 }
 
-.about-text-bold {
-    display: inline-block;
-    margin-bottom: 35px;
-    @include font(500, 16px, 28px);
+.about-image-wrapper {
+    flex-basis: 50%;
+    padding-right: 37px;
+}
+
+.about-text-wrapper {
+    flex-basis: 50%;
+    padding-left: 37px;
 }
 
 .about-text {
+    margin-bottom: 35px;
+    
     color: var(--grey-text-color);
     @include font(500, 14px, 27px);
+}
+
+.about-text-bold {
+    color: var(--black);
+    @include font(500, 16px, 28px);
 }
