@@ -38,40 +38,22 @@
 }
 
 .about-label { 
-    color: var(--pink-text-color);
     margin-bottom: 15px;  
-
-    font-family: var(--titan-font);
-    @include font(400, 18px, 21px);
     text-transform: uppercase;
     text-align: center;
-
-    @media screen and (min-width: 700px) {
-        @include font(400, 26px, 30px);
-    }
-
-    @media screen and (min-width: 1050px) {
-        @include font(400, 30px, 34px, 0.04em);
-    }
 }
 
 .about-title {
     margin-bottom: 26px;
-
-    color: var(--main-pink-color);
-    font-family: var(--titan-font);
-    @include font(400, 34px, 39px, 0.04em);
     text-align: center;
     text-transform: uppercase;
 
     @media screen and (min-width: 700px) {
-        margin-bottom: 50px;
-       @include font(400, 48px, 55px, 0.04em);         
+        margin-bottom: 50px;      
     }
 
     @media screen and (min-width: 1050px) {
-        margin-bottom: 55px;
-        @include font(400, 58px, 66px, 0.06em);        
+        margin-bottom: 55px;      
     }
 }
 
