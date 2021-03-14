@@ -1,0 +1,132 @@
+.about-section {
+    padding-top: 125px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 320px;
+    background-color: var(--section-background);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media screen and (max-width: 699px) {
+        background-image: url(../images/mobile/milk-about@1x.png);
+        background-position: right 0px bottom 80px;
+
+    
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi) {
+        background-image: url(../images/mobile/milk-about@2x.png); 
+        }
+    }
+
+    @media screen and (min-width: 700px) {
+        padding-bottom: 33px;
+        max-width: 768px;
+    }
+
+    @media screen and (min-width: 1050px) {
+        padding-bottom: 73px;
+        max-width: 1200px;
+        background-image: url(../images/desktop/milk-about-desktop@1x.png);
+        background-position: 0px 342px;
+
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi) {
+           background-image: url(../images/desktop/milk-about-desktop@2x.png); 
+        }
+    }
+}
+
+.about-label { 
+    margin-bottom: 15px;  
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.about-title {
+    margin-bottom: 26px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 700px) {
+        margin-bottom: 50px;      
+    }
+
+    @media screen and (min-width: 1050px) {
+        margin-bottom: 55px;      
+    }
+}
+
+.about-wrapper {
+    @media screen and (min-width: 700px) {
+       display: flex;   
+       align-items: center;     
+    }
+}
+
+.about-left-side {
+    @media screen and (min-width: 700px) {
+        flex-basis: 50%;        
+    }
+}
+
+.about-right-side {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @media screen and (min-width: 700px) {
+        flex-basis: 50%;  
+        padding-left: 17px; 
+        padding-right: 0px;     
+    }
+
+    @media screen and (min-width: 1050px) {
+        padding-left: 74px;      
+    }
+}
+
+.about-image {
+    @media screen and (max-width: 699px) {
+      margin-bottom: 45px;  
+    }
+}
+
+.about-description {
+  margin-bottom: 35px; 
+  @include font(500, 12px, 19px);
+
+  @media screen and (min-width: 768px) {
+      @include font(500, 14px, 25px);
+  }
+
+  @media screen and (min-width: 1050px) {
+     @include font(500, 16px, 28px);
+  } 
+}
+
+.about-text {
+    margin-bottom: 17px;
+    
+    color: var(--grey-text-color);
+    @include font(500, 12px, 19px);
+
+
+    @media screen and (min-width: 700px) {
+        margin-bottom: 15px;   
+        @include font(500, 14px, 25px); 
+        
+        &:nth-last-of-type(1) {
+            margin-bottom: 60px;
+        }  
+    }
+
+    @media screen and (min-width: 1050px) {
+        margin-bottom: 40px;
+        @include font(500, 14px, 27px);  
+
+        &:nth-last-of-type(1) {
+        margin-bottom: 45px;
+        }      
+    }
+}
+
