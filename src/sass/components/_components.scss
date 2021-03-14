@@ -1,0 +1,216 @@
+.header-btn {
+  @include font(700, 16px, 30px);
+  align-items: center;
+  text-align: center;
+  background-color: var(--white);
+  color: var(--accent-color);
+  border-radius: 22px;
+  cursor: pointer;
+  border: none;
+
+  display: inline-block;
+  min-width: 209px;
+  min-height: 44px;
+  padding-left: 37px;
+  padding-right: 37px;
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+}
+
+.header-btn-tablet-modal {
+  @include font(700, 16px, 30px);
+  align-items: center;
+  text-align: center;
+  background-color: var(--white);
+  color: var(--accent-color);
+  border-radius: 22px;
+  cursor: pointer;
+  border: none;
+
+  display: inline-block;
+  min-width: 186px;
+  min-height: 44px;
+  padding-left: 37px;
+  padding-right: 37px;
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+}
+
+.hero-links-list {
+  display: flex;
+}
+
+.hero-links-list-link {
+  @include font(400, 8px, 10px);
+  align-items: center;
+  text-align: center;
+
+  color: inherit;
+  background-color: inherit;
+  border-radius: 20px;
+  cursor: pointer;
+
+  display: inline-block;
+  min-width: 62px;
+  padding: 11px;
+}
+
+.hero-links-list-item {
+  color: var(--accent-color);
+  background-color: var(--white);
+  border-radius: 20px;
+  &:not(:last-child) {
+    margin-right: 15px;
+    background-color: var(--accent-color);
+    color: var(--white);
+  }
+
+  &:nth-child(2) .hero-links-list-link:hover,
+  .hero-links-list-link:focus {
+    background-color: #ecebeb;
+  }
+}
+
+.hero-round-btn {
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+  border: none;
+}
+
+.round-btn {
+  background-color: var(--white);
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+
+.about-btn {
+  @include font(700, 14px, 38px);
+  align-items: center;
+  text-align: center;
+  background-color: var(--white);
+  color: var(--accent-color);
+  border-radius: 22px;
+  cursor: pointer;
+  border: none;
+
+  display: inline-block;
+  min-width: 176px;
+  min-height: 44px;
+  padding-left: 37px;
+  padding-right: 37px;
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+}
+
+.contacts-btn {
+  @include font(700, 16px, 30px);
+  align-items: center;
+  text-align: center;
+  background-color: var(--white);
+  color: var(--accent-color);
+  border-radius: 22px;
+  cursor: pointer;
+  border: none;
+
+  display: inline-block;
+  min-width: 160px;
+  min-height: 44px;
+  padding-left: 37px;
+  padding-right: 37px;
+
+  &:not(:last-child) {
+    background-color: var(--accent-color);
+    color: var(--white);
+  }
+
+  &:nth-child(2):hover,
+  &:nth-child(2):focus {
+    background-color: #ecebeb;
+  }
+}
+
+.label {
+  font-family: Titan One;
+  text-transform: uppercase;
+}
+.title {
+  font-family: Titan One;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .contacts-btns-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contacts-btn {
+    margin-bottom: 10px;
+  }
+  .label {
+    @include font(400, 18px, 21px, 0.04em);
+    color: var(--pink-text-color);
+  }
+  .title {
+    @include font(400, 34px, 39px, 0.04em);
+    color: var(--main-pink-color);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-btn {
+    min-width: 160px;
+  }
+
+  .contacts-btn {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  .about-btn {
+    @include font(700, 16px, 21px);
+  }
+  .label {
+    @include font(400, 26px, 30px);
+    color: var(--pink-text-color);
+  }
+  .title {
+    @include font(400, 48px, 55px, 0.04em);
+    color: var(--main-pink-color);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-links-list-link {
+    @include font(400, 14px, 18px);
+    min-width: 104px;
+    padding: 11px 22px;
+  }
+
+  .label {
+    @include font(400, 30px, 34px, 0.04em);
+    color: var(--pink-text-color);
+  }
+  .title {
+    @include font(400, 58px, 66px, 0.06em);
+    color: var(--main-pink-color);
+  }
+}
