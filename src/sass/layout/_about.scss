@@ -1,60 +1,134 @@
 .about-section {
     padding-top: 125px;
+    padding-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
+    max-width: 320px;
     background-color: var(--section-background);
-    max-width: 1280px;
-    background-image: url(../images/desktop/milk-about-desktop@1x.png);
     background-repeat: no-repeat;
-    background-position: 0px 342px;
     background-size: contain;
+
+    @media screen and (max-width: 699px) {
+        background-image: url(../images/mobile/milk-about@1x.png);
+        background-position: right 0px bottom 80px;
+
+    
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi) {
+        background-image: url(../images/mobile/milk-about@2x.png); 
+        }
+    }
+
+    @media screen and (min-width: 700px) {
+        padding-bottom: 33px;
+        max-width: 768px;
+    }
+
+    @media screen and (min-width: 1050px) {
+        padding-bottom: 73px;
+        max-width: 1200px;
+        background-image: url(../images/desktop/milk-about-desktop@1x.png);
+        background-position: 0px 342px;
+
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi) {
+           background-image: url(../images/desktop/milk-about-desktop@2x.png); 
+        }
+    }
 }
 
-// .label {   
-//     font-family: var(--titan-font);
-//     @include font(400, 30px, 34px, 0.04em);
-// }
+.label { 
+    margin-bottom: 15px;  
+
+    font-family: var(--titan-font);
+    @include font(400, 18px, 21px);
+    text-transform: uppercase;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+        @include font(400, 26px, 30px);
+    }
+
+    @media screen and (min-width: 1050px) {
+        @include font(400, 30px, 34px, 0.04em);
+    }
+}
 
 .about-label {
     color: var(--pink-text-color);
-    font-family: var(--titan-font);
-    @include font(400, 30px, 34px, 0.04em);
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 15px;
-}
 
-.title {
-    color: var(--main-pink-color);
-    font-family: var(--titan-font);
-    @include font(400, 58px, 66px, 0.06em);
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 106px;
 }
 
 .about-wrapper {
-    display: flex;
+    @media screen and (min-width: 768px) {
+       display: flex;        
+    }
 }
 
-.about-image-wrapper {
-    flex-basis: 50%;
-    padding-right: 37px;
+.about-left-side {
+    @media screen and (min-width: 768px) {
+        flex-basis: 50%;        
+    }
 }
 
-.about-text-wrapper {
-    flex-basis: 50%;
-    padding-left: 37px;
+.about-right-side {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @media screen and (min-width: 768px) {
+        flex-basis: 50%;  
+        padding-left: 17px; 
+        padding-right: 0px;     
+    }
+
+    @media screen and (min-width: 1050px) {
+        padding-left: 74px;      
+    }
+}
+
+.about-image {
+    @media screen and (max-width: 699px) {
+      margin-bottom: 45px;  
+    }
+}
+
+.about-description {
+  margin-bottom: 35px; 
+  @include font(500, 12px, 19px);
+
+  @media screen and (min-width: 768px) {
+      @include font(500, 14px, 25px);
+  }
+
+  @media screen and (min-width: 1050px) {
+     @include font(500, 16px, 28px);
+  }
+   
 }
 
 .about-text {
-    margin-bottom: 35px;
+    margin-bottom: 17px;
     
     color: var(--grey-text-color);
-    @include font(500, 14px, 27px);
+    @include font(500, 12px, 19px);
+
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 15px;   
+        @include font(500, 14px, 25px); 
+        
+        &:nth-last-of-type(1) {
+            margin-bottom: 60px;
+        }  
+    }
+
+    @media screen and (min-width: 1050px) {
+        margin-bottom: 40px;
+        @include font(500, 14px, 27px);  
+
+        &:nth-last-of-type(1) {
+        margin-bottom: 45px;
+        }      
+    }
 }
 
-.about-text-bold {
-    color: var(--black);
-    @include font(500, 16px, 28px);
-}
