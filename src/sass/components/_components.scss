@@ -42,41 +42,6 @@
   }
 }
 
-.hero-links-list {
-  display: flex;
-}
-
-.hero-links-list-link {
-  @include font(400, 8px, 10px);
-  align-items: center;
-  text-align: center;
-
-  color: inherit;
-  background-color: inherit;
-  border-radius: 20px;
-  cursor: pointer;
-
-  display: inline-block;
-  min-width: 62px;
-  padding: 11px;
-}
-
-.hero-links-list-item {
-  color: var(--accent-color);
-  background-color: var(--white);
-  border-radius: 20px;
-  &:not(:last-child) {
-    margin-right: 15px;
-    background-color: var(--accent-color);
-    color: var(--white);
-  }
-
-  &:nth-child(2) .hero-links-list-link:hover,
-  .hero-links-list-link:focus {
-    background-color: #ecebeb;
-  }
-}
-
 .hero-round-btn {
   background-color: #fff;
   border-radius: 50%;
