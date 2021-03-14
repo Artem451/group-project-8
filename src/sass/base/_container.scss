@@ -1,22 +1,22 @@
 .container {
-    width: 100%;
-    margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 320px) {
-    .container {
-        width: 280px;
-    }
+  .container {
+    width: 280px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-    .container {
-        width: 700px;
-    }
+  .container {
+    width: 700px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-    .container {
-        width: 1050px;
-    }
+  .container {
+    width: 1050px;
+  }
 }

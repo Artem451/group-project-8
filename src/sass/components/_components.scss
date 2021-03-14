@@ -87,7 +87,7 @@
   align-items: center;
   text-align: center;
   background-color: var(--white);
-  color: var(--accent-color);
+  color: var(--main-pink-color);
   border-radius: 22px;
   cursor: pointer;
   border: none;
@@ -99,7 +99,7 @@
   padding-right: 37px;
 
   &:not(:last-child) {
-    background-color: var(--accent-color);
+    background-color: var(--main-pink-color);
     color: var(--white);
   }
 
@@ -126,7 +126,7 @@
     justify-content: center;
   }
 
-  .contacts-btn {
+  .contacts-btn:not(:last-child) {
     margin-bottom: 10px;
   }
   .label {
