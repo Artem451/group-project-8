@@ -4,6 +4,8 @@
 }
 
 .reviews-text {
+    position: relative;
+    z-index: 10;
     padding: 0 15px;
     @include font(500, 12px, 31px);
     color: var(--black);
@@ -21,8 +23,9 @@
         position: absolute;
         content: "";
         display: block;
-        top: 28px;
-        left: 61px;
+        top: -12px;
+        left: 17px;
+        z-index: -1;
         width: 54px;
         height: 40px;
         background-image: url(../images/quotes.svg);  
@@ -39,7 +42,6 @@
 }
 
 .reviews-wrapper {
-    position: relative;
     width: 280px;
     margin: 0 auto;
     background-color: var(--reviews-background);
