@@ -1,5 +1,6 @@
 .advantages {
-  padding-bottom: 140px;
+  padding-top: 39px;
+  padding-bottom: 97px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -93,6 +94,11 @@
 }
 
 @media screen and (min-width: 768px) {
+  .advantages {
+  padding-top: 66px;
+  padding-bottom: 140px;
+}
+
   .advantages-icon1::before,
   .advantages-icon2::before,
   .advantages-icon3::before,
@@ -123,6 +129,11 @@
 }
 
 @media screen and (min-width: 1200px) {
+  .advantages {
+  padding-top: 39px;
+  padding-bottom: 139px;
+}
+
   .advantages-icon1::before,
   .advantages-icon2::before,
   .advantages-icon3::before,
