@@ -82,6 +82,7 @@
 
 .slick-dots {
   list-style: none;
+  font-size: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,4 +110,82 @@
   border-radius: 0;
 }
 
-// потрібно поставити кавички за текстом
+@media screen and (min-width: 768px) {
+  .reviews {
+    padding-top: 119px;
+    padding-bottom: 119px;
+  }
+
+  .reviews-text {
+    @include font(500, 14px, 30px);
+    width: 457px;
+    padding: 0;
+
+    &::before {
+      top: -16px;
+      left: -25px;
+    }
+  }
+
+  .reviews-wrapper {
+    width: 620px;
+    padding-top: 47px;
+    padding-bottom: 28px;
+  }
+
+  .location-text {
+    @include font(500, 16px, 30px);
+
+    &::before {
+      top: 24px;
+    }
+  }
+
+  .reviews-img {
+    margin-bottom: 19px;
+  }
+
+  .reviews-box {
+    padding-top: 42px;
+    padding-bottom: 35px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .reviews {
+    background-color: var(--section-background);
+    padding-top: 123px;
+    padding-bottom: 132px;
+  }
+
+  .reviews-text {
+    @include font(500, 16px, 30px);
+    width: 710px;
+    padding: 0 15px;
+
+    &::before {
+      left: -10px;
+    }
+  }
+
+  .reviews-wrapper {
+    width: 926px;
+    padding-bottom: 32px;
+  }
+
+  .location-text {
+    @include font(500, 20px, 37px);
+
+    &::before {
+      top: 15px;
+    }
+  }
+
+  .reviews-img {
+    margin-bottom: 15px;
+  }
+
+  .reviews-box {
+    padding-top: 34px;
+  }
+}
