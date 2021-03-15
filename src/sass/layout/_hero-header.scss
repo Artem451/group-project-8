@@ -1,0 +1,110 @@
+.hero-header {
+    padding-top: 6px;
+    background-color: var(--header-background);
+    min-height: 496px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 137px;
+    overflow: hidden;
+}
+
+.nav-list {
+    display: none;
+}
+
+.header-btn {
+    display: none;
+}
+
+.presentation-list {
+    display: none;
+}
+
+.manufacture {
+    display: none;
+}
+
+.burger-menu-btn {
+    background-color: transparent;
+    border: none;
+}
+.tasty-header-image{
+    display: none;
+}
+.burger-menu-btn-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.hero-title {
+    position: relative;
+    color: var(--white);
+    margin-bottom: 19px;
+    z-index: 1;
+}
+
+.hero-title-text {
+    @include font (400, 48px, 45px, 0.04em);
+    color: var(--main-pink-color);
+    
+}
+.hero-links-list {
+    display: flex;
+}
+.hero-links-list-item {   
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    min-height: 24px;
+    &.prod {
+    background-color: var(--main-pink-color);
+    color: var(--white);
+    min-width: 63px;
+    margin-right: 8px;
+    }
+
+    &.made {
+    background-color: var(--white);
+    color: var(--main-pink-color);
+    min-width: 82px;
+    }
+}
+
+.hero-links-list-link-product {
+    @include font (400, 8px, 10px);
+    color: var(--white);
+}
+
+.hero-links-list-link-made {
+    @include font (400, 8px, 10px);
+    color: var(--main-pink-color);
+}
+
+.icecream-background {
+    position: absolute;
+    background-color: var(--font-color);
+    border-radius: 50%;
+    width: 346px;
+    height: 344px;
+    z-index: 0;
+    top:0;
+    right: 0;
+    transform: translate(20%, 24%);
+    
+}
+
+.icecream-img {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 81px;
+    top: 9px;
+}
