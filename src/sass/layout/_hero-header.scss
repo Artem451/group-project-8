@@ -126,6 +126,11 @@
         z-index: 1;
     }
 
+    .header-btn-icon {
+        fill: var(--main-pink-color);
+        margin-left: 12px;
+    }
+
     .header-btn-list {
         display: flex;
         justify-content: center;
