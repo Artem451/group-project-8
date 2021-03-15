@@ -117,83 +117,20 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\images\\mobile\\icecream-products-mobile@1x.png":[["icecream-products-mobile@1x.b7713143.png","images/mobile/icecream-products-mobile@1x.png"],"images/mobile/icecream-products-mobile@1x.png"],"./..\\images\\mobile\\icecoffee-products-mobile@1x.png":[["icecoffee-products-mobile@1x.78d9cfb0.png","images/mobile/icecoffee-products-mobile@1x.png"],"images/mobile/icecoffee-products-mobile@1x.png"],"./..\\images\\mobile\\milkshake-products-mobile@1x.png":[["milkshake-products-mobile@1x.fb5e6a19.png","images/mobile/milkshake-products-mobile@1x.png"],"images/mobile/milkshake-products-mobile@1x.png"],"./..\\images\\dots.svg":[["dots.ec1fa6a0.svg","images/dots.svg"],"images/dots.svg"],"./..\\images\\mobile\\icecream-products-mobile@2x.png":[["icecream-products-mobile@2x.7c618b98.png","images/mobile/icecream-products-mobile@2x.png"],"images/mobile/icecream-products-mobile@2x.png"],"./..\\images\\mobile\\icecoffee-products-mobile@2x.png":[["icecoffee-products-mobile@2x.c5ba8650.png","images/mobile/icecoffee-products-mobile@2x.png"],"images/mobile/icecoffee-products-mobile@2x.png"],"./..\\images\\mobile\\milkshake-products-mobile@2x.png":[["milkshake-products-mobile@2x.a42390d6.png","images/mobile/milkshake-products-mobile@2x.png"],"images/mobile/milkshake-products-mobile@2x.png"],"./..\\images\\tablet\\icecream-products-tablet@1x.png":[["icecream-products-tablet@1x.8f9bdbe7.png","images/tablet/icecream-products-tablet@1x.png"],"images/tablet/icecream-products-tablet@1x.png"],"./..\\images\\tablet\\icecoffee-products-tablet@1x.png":[["icecoffee-products-tablet@1x.916ed59e.png","images/tablet/icecoffee-products-tablet@1x.png"],"images/tablet/icecoffee-products-tablet@1x.png"],"./..\\images\\tablet\\milkshake-products-tablet@1x.png":[["milkshake-products-tablet@1x.b7a0a5f2.png","images/tablet/milkshake-products-tablet@1x.png"],"images/tablet/milkshake-products-tablet@1x.png"],"./..\\images\\tablet\\icecream-products-tablet@2x.png":[["icecream-products-tablet@2x.c1eee120.png","images/tablet/icecream-products-tablet@2x.png"],"images/tablet/icecream-products-tablet@2x.png"],"./..\\images\\tablet\\icecoffee-products-tablet@2x.png":[["icecoffee-products-tablet@2x.9caef889.png","images/tablet/icecoffee-products-tablet@2x.png"],"images/tablet/icecoffee-products-tablet@2x.png"],"./..\\images\\tablet\\milkshake-products-tablet@2x.png":[["milkshake-products-tablet@2x.3e9a4399.png","images/tablet/milkshake-products-tablet@2x.png"],"images/tablet/milkshake-products-tablet@2x.png"],"./..\\images\\desktop\\icecream-products-desktop@1x.png":[["icecream-products-desktop@1x.c2e5f188.png","images/desktop/icecream-products-desktop@1x.png"],"images/desktop/icecream-products-desktop@1x.png"],"./..\\images\\desktop\\icecoffee-products-desktop@1x.png":[["icecoffee-products-desktop@1x.d54a8078.png","images/desktop/icecoffee-products-desktop@1x.png"],"images/desktop/icecoffee-products-desktop@1x.png"],"./..\\images\\desktop\\milkshake-products-desktop@1x.png":[["milkshake-products-desktop@1x.37fae442.png","images/desktop/milkshake-products-desktop@1x.png"],"images/desktop/milkshake-products-desktop@1x.png"],"./..\\images\\desktop\\icecream-products-desktop@2x.png":[["icecream-products-desktop@2x.c747febc.png","images/desktop/icecream-products-desktop@2x.png"],"images/desktop/icecream-products-desktop@2x.png"],"./..\\images\\desktop\\icecoffee-products-desktop@2x.png":[["icecoffee-products-desktop@2x.e3f8ee03.png","images/desktop/icecoffee-products-desktop@2x.png"],"images/desktop/icecoffee-products-desktop@2x.png"],"./..\\images\\desktop\\milkshake-products-desktop@2x.png":[["milkshake-products-desktop@2x.f3a842ed.png","images/desktop/milkshake-products-desktop@2x.png"],"images/desktop/milkshake-products-desktop@2x.png"],"./..\\images\\mobile\\milk-about@1x.png":[["milk-about@1x.114a1eef.png","images/mobile/milk-about@1x.png"],"images/mobile/milk-about@1x.png"],"./..\\images\\mobile\\milk-about@2x.png":[["milk-about@2x.34a3c80f.png","images/mobile/milk-about@2x.png"],"images/mobile/milk-about@2x.png"],"./..\\images\\desktop\\milk-about-desktop@1x.png":[["milk-about-desktop@1x.9a888175.png","images/desktop/milk-about-desktop@1x.png"],"images/desktop/milk-about-desktop@1x.png"],"./..\\images\\desktop\\milk-about-desktop@2x.png":[["milk-about-desktop@2x.81b6cc3d.png","images/desktop/milk-about-desktop@2x.png"],"images/desktop/milk-about-desktop@2x.png"],"./..\\images\\icon1-advantages@1x.png":[["icon1-advantages@1x.ff09fac7.png","images/icon1-advantages@1x.png"],"images/icon1-advantages@1x.png"],"./..\\images\\icon2-advantages@1x.png":[["icon2-advantages@1x.25a2bba5.png","images/icon2-advantages@1x.png"],"images/icon2-advantages@1x.png"],"./..\\images\\icon3-advantages@1x.png":[["icon3-advantages@1x.2622d13d.png","images/icon3-advantages@1x.png"],"images/icon3-advantages@1x.png"],"./..\\images\\icon1-advantages@2x.png":[["icon1-advantages@2x.bce325b2.png","images/icon1-advantages@2x.png"],"images/icon1-advantages@2x.png"],"./..\\images\\icon2-advantages@2x.png":[["icon2-advantages@2x.cadae6b8.png","images/icon2-advantages@2x.png"],"images/icon2-advantages@2x.png"],"./..\\images\\icon3-advantages@2x.png":[["icon3-advantages@2x.4f5d56ab.png","images/icon3-advantages@2x.png"],"images/icon3-advantages@2x.png"],"./..\\images\\quotes.svg":[["quotes.4d7be276.svg","images/quotes.svg"],"images/quotes.svg"],"./..\\images\\group.svg":[["group.10088665.svg","images/group.svg"],"images/group.svg"],"./..\\images\\home.svg":[["home.941c208c.svg","images/home.svg"],"images/home.svg"],"./..\\images\\contact-bg@1x.png":[["contact-bg@1x.1d971efe.png","images/contact-bg@1x.png"],"images/contact-bg@1x.png"],"./..\\images\\contact-bg@2x.png":[["contact-bg@2x.2ed1eb77.png","images/contact-bg@2x.png"],"images/contact-bg@2x.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
-"use strict";
-
-require("./sass/main.scss");
-},{"./sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+})({"js/slider.js":[function(require,module,exports) {
+$(document).ready(function () {
+  $('.slider').slick({
+    arrows: false,
+    dots: true,
+    slidesToShow: 1,
+    speed: 500,
+    easing: 'ease',
+    adaptiveHeight: false,
+    infinite: false,
+    draggable: false
+  });
+});
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -397,5 +334,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/slider.js"], null)
+//# sourceMappingURL=/slider.d16eec5e.js.map
