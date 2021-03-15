@@ -19,15 +19,15 @@
         }
     }
 
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 768px) {
         padding-bottom: 66px;
     }
 
-    @media screen and (min-width: 1050px) {
+    @media screen and (min-width: 1200px) {
         padding-bottom: 39px;
         background-image: url(../images/desktop/milk-about-desktop@1x.png);
         background-position: center 342px;
-        background-size: 1200px;
+        background-size: 1280px;
 
         @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi) {
@@ -45,11 +45,11 @@
     margin-bottom: 26px;
     text-align: center;
 
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 768px) {
         margin-bottom: 50px;      
     }
 
-    @media screen and (min-width: 1050px) {
+    @media screen and (min-width: 1200px) {
         margin-bottom: 55px;      
     }
 }
@@ -71,19 +71,19 @@
     padding-left: 30px;
     padding-right: 30px;
 
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 768px) {
         flex-basis: 50%;  
         padding-left: 17px; 
         padding-right: 0px;     
     }
 
-    @media screen and (min-width: 1050px) {
+    @media screen and (min-width: 1200px) {
         padding-left: 74px;      
     }
 }
 
 .about-image {
-    @media screen and (max-width: 699px) {
+    @media screen and (max-width: 767px) {
       margin-bottom: 45px;  
     }
 }
@@ -96,7 +96,7 @@
       @include font(500, 14px, 25px);
   }
 
-  @media screen and (min-width: 1050px) {
+  @media screen and (min-width: 1200px) {
      @include font(500, 16px, 28px);
   } 
 }
@@ -108,7 +108,7 @@
     @include font(500, 12px, 19px);
 
 
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 768px) {
         margin-bottom: 15px;   
         @include font(500, 14px, 25px); 
         
@@ -117,7 +117,7 @@
         }  
     }
 
-    @media screen and (min-width: 1050px) {
+    @media screen and (min-width: 1200px) {
         margin-bottom: 40px;
         @include font(500, 14px, 27px);  
 
