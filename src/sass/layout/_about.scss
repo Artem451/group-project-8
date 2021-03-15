@@ -1,17 +1,17 @@
 .about-section {
     padding-top: 125px;
-    padding-bottom: 20px;
+    padding-bottom: 39px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 320px;
+    width: 100%;
     background-color: var(--section-background);
     background-repeat: no-repeat;
-    background-size: contain;
 
-    @media screen and (max-width: 699px) {
+    @media screen and (max-width: 767px) {
         background-image: url(../images/mobile/milk-about@1x.png);
-        background-position: right 0px bottom 80px;
-
+        background-position: center bottom 80px;
+        background-size: 320px;
+        
     
         @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi) {
@@ -20,15 +20,14 @@
     }
 
     @media screen and (min-width: 700px) {
-        padding-bottom: 33px;
-        max-width: 768px;
+        padding-bottom: 66px;
     }
 
     @media screen and (min-width: 1050px) {
-        padding-bottom: 73px;
-        max-width: 1200px;
+        padding-bottom: 39px;
         background-image: url(../images/desktop/milk-about-desktop@1x.png);
-        background-position: 0px 342px;
+        background-position: center 342px;
+        background-size: 1200px;
 
         @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi) {
@@ -39,14 +38,12 @@
 
 .about-label { 
     margin-bottom: 15px;  
-    text-transform: uppercase;
     text-align: center;
 }
 
 .about-title {
     margin-bottom: 26px;
     text-align: center;
-    text-transform: uppercase;
 
     @media screen and (min-width: 700px) {
         margin-bottom: 50px;      
@@ -58,14 +55,14 @@
 }
 
 .about-wrapper {
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 768px) {
        display: flex;   
        align-items: center;     
     }
 }
 
 .about-left-side {
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 768px) {
         flex-basis: 50%;        
     }
 }
@@ -130,3 +127,9 @@
     }
 }
 
+.about-icon {
+    fill: var(--main-pink-color);
+    width: 10px;
+    height: 10px;
+    margin-left: 13px;
+}
