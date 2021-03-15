@@ -159,3 +159,50 @@
     @include font(500, 14px, 26px);
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .contact-wrapper {
+    padding-bottom: 85px;
+  }
+
+  .contact-card {
+    width: 330px;
+    padding: 50px 45px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  .contact-city {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .contact-schedule__item {
+    font-size: 16px;
+  }
+}
+
+// Overlay
+
+ .contacts-overlay {
+   @media screen and (min-width: 1200px) {
+     position: absolute;
+     left: 50%;
+     top: 12%;
+     transform: translateX(-50%);
+     min-width: 1200px;
+     width: 100%;
+     height: 352px;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: 50%;
+     background-image: url('../images/contact-bg@1x.png');
+   }
+
+   @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+        background-image: url('../images/contact-bg@2x.png');
+      }
+  }
