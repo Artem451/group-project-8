@@ -47,6 +47,7 @@
     color: var(--white);
     margin-bottom: 19px;
     z-index: 1;
+    text-align: start;
 }
 
 .hero-title-text {
@@ -107,4 +108,95 @@
     position: absolute;
     left: 81px;
     top: 9px;
+}
+
+@media screen and (min-width: 768px) {
+    .hero-header {
+        min-height: 334px;
+        padding-top: 37px;
+        padding-bottom: 28px;
+    }
+
+    .header {
+        margin-bottom: 15px;
+    }
+    .header-btn {
+        position: relative;
+        display: flex;
+        z-index: 1;
+    }
+
+    .header-btn-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-btn-list-item {
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+    
+    .burger-menu-btn {
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero-title {
+        width: 162px;
+        @include font (400, 22px, 25px, 0.04em)
+    }
+    
+    .hero-title-text {
+        @include font (400, 34px, 30px, 0.04em)
+    }
+
+    .hero-links-list {
+        margin-bottom: 19px;
+    }
+
+    .manufacture {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        height: auto;
+    }
+
+    .manufacture-img {
+        width: 124px;
+        height: auto;
+        
+    }
+
+   .manufacture-text {
+        width: 114px;
+        @include font (400, 8px, 12px);
+    
+        color: #FFFFFF;
+   }
+   .manufacture-wraper {
+       display: flex;
+       flex-direction: column;
+       justify-content:end;
+       align-items: flex-start;
+   }
+
+   .hero-round-btn {
+       width: 18px;
+       height: 18px;
+   }
+
+   .icecream-background {
+       width: 324px;
+       height: 322px;
+       top: 31px;
+       right: 140px;
+       transform: none;
+   }
+
+   .icecream-img {
+       top: 32px;
+       left: 71px;
+   }
 }
