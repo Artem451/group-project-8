@@ -190,9 +190,9 @@
    .icecream-background {
        width: 324px;
        height: 322px;
-       top: 31px;
-       right: 140px;
-       transform: none;
+       top: 50%;
+       left: 50%;
+       transform: translate(-25%, -52%);
    }
 
    .icecream-img {
