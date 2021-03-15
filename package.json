@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://artem451.github.io/parcel-project-template",
+  "homepage": "https://artem451.github.io/group-project-8",
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html",
-    "predeploy": "npm run build -- --public-url /parcel-project-template/",
+    "predeploy": "npm run build -- --public-url /group-project-8/",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
