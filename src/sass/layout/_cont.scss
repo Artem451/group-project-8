@@ -127,7 +127,7 @@
     width: 220px;
     padding: 50px 20px;
     margin-bottom: 0px;
-    transition: transform 250ms cubic-bezier(.17,.67,.83,.67), box-shadow 250ms cubic-bezier(.17,.67,.83,.67);
+    transition: transform var(--animation-duration) var(--animation-type), box-shadow var(--animation-duration) var(--animation-type);
     &:not(:last-child) {
       margin-right: 20px;
     }
