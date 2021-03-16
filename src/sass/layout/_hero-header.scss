@@ -11,7 +11,6 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 137px;
-    overflow: hidden;
 }
 
 .nav-list {
@@ -34,12 +33,81 @@
     background-color: transparent;
     border: none;
 }
+
 .tasty-header-image{
     display: none;
 }
+
 .burger-menu-btn-icon {
     width: 20px;
     height: 20px;
+}
+
+.mobile-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    
+    padding-top: 123px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
+    overflow: auto;
+    top: 0;
+    right: 0;
+    background-color: var(--mobile-menu-background);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 
+                0px 2px 4px rgba(0, 0, 0, 0.08), 
+                0px 1px 3px rgba(0, 0, 0, 0.16);            
+    
+    opacity: 0;
+    visibility: hidden;
+}
+
+.mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+}
+
+.mobile-menu-close-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.mobile-menu-nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mobile-menu-nav-list-item {
+    display: flex;
+    padding-left: 21px;
+    height: 42px;
+    border: 1px solid #E18298;
+    & :focus {
+        color: var(--main-pink-color);
+    }
+}
+
+.mobile-menu-nav-list-link {
+    @include font(700, 14px, 18px);
+    color: var(--white);
+    align-self: center;
 }
 
 .hero-title {
@@ -123,7 +191,7 @@
     .header-btn {
         position: relative;
         display: flex;
-        z-index: 1;
+        z-index: 100;
     }
 
     .header-btn-icon {
@@ -161,6 +229,44 @@
         margin-bottom: 19px;
     }
 
+    .presentation-list {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-self: end;
+        top: 31%;
+        right: 0;
+        transform: translate(-25%, -50%);
+        
+    }
+
+    .presentation-list-item {
+        position: relative;
+        z-index: 1;
+        font-family: var(--titan-font);
+        @include font(400, 28px, 32px, 0.04em);
+        color: var(--main-pink-color);
+        text-align: right;
+        word-wrap: normal;
+        &>p {
+            font-family: var(--primary-font);
+            @include font(400, 8px, 10px);
+            color: var(--white);
+        }
+    }
+
+    .presentation-list-decor {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: -2px;
+        right: -10px;
+        z-index: -1;
+
+        background-color: #FFFFFF;
+        border-radius: 50%;
+    }
+
     .manufacture {
         display: flex;
         justify-content: flex-start;
@@ -176,9 +282,9 @@
 
    .manufacture-text {
         width: 114px;
-        @include font (400, 8px, 12px);
-    
-        color: #FFFFFF;
+        margin-bottom: 7px;
+        @include font (400, 8px, 12px); 
+        color: var(--white);
    }
    .manufacture-wraper {
        display: flex;
@@ -188,8 +294,16 @@
    }
 
    .hero-round-btn {
+       display: flex;
+       align-items: center;
        width: 18px;
        height: 18px;
+       fill: var(--main-pink-color);
+   }
+
+   .hero-round-btn-icon {
+       width: 10px;
+       height: 10px;
    }
 
    .icecream-background {
