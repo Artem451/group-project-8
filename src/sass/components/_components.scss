@@ -79,6 +79,8 @@
   padding-left: 37px;
   padding-right: 37px;
 
+  transition: background-color var(--animation-duration) var(--animation-type);
+
   &:hover,
   &:focus {
     background-color: #ecebeb;
@@ -107,7 +109,7 @@
   }
 
   &:not(:last-child):hover,
-  &:not(:last-child):focus, {
+  &:not(:last-child):focus {
     color: var(--main-pink-color);
     background-color: #ecebeb;
   }
