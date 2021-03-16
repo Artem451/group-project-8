@@ -205,13 +205,10 @@
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
-        height: auto;
     }
 
     .manufacture-img {
         width: 124px;
-        height: auto;
-        
     }
 
    .manufacture-text {
@@ -306,7 +303,7 @@
         height: 538px;
         top: 50%;
         left: 50%;
-        transform: translate(-30%, -41%);
+        transform: translate(-30%, -48%);
     }
 
     .icecream-img {
@@ -342,7 +339,7 @@
     }
 
     .tasty-header-image {
-        top: 82%;
+        top: 73%;
     }
 
     .presentation-list {
@@ -362,5 +359,28 @@
         height: 30px;
         top: -7px;
         right: -15px;
+    }
+
+    .hero-round-btn {
+        display: flex;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+    }
+
+    .hero-round-btn-icon {
+        width: 10px;
+        height: 10px;
+    }
+
+    .manufacture-img {
+        width: 188px;
+    }
+
+    .manufacture-text {
+        @include font(400, 14px, 20px);
+        width: 200px;
+        margin-bottom: 20px;
+        align-self: flex-start;
     }
 }
