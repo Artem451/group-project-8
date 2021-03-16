@@ -54,7 +54,7 @@
 .contact-description {
   @include font(500, 12px, 18px);
   color: var(--grey-text-color);
-  padding-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .contact-schedule {
@@ -104,6 +104,13 @@
   fill: var(--main-pink-color);
 }
 
+.contacts-btn__state:hover,
+.contacts-btn__state:focus {
+  .contacts-btn-icon__white {
+    fill: var(--main-pink-color);
+  }
+}
+
 @media screen and (max-width: 319px) {
   .contact-wrapper {
     padding: 0px 50px;
@@ -139,7 +146,7 @@
   }
   .contact-description {
     @include font(500, 14px, 23px);
-    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
 
   .contact-schedule {
