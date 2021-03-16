@@ -270,15 +270,24 @@
         display: none;
     }
 
+    
+
     .hero-header {
         min-height: 665px;
     }
     .header {
         margin-bottom: 84px;
     }
+
+    .logo-link {
+        position: absolute;
+        left: -68px;
+    }
+
     .nav-list {
         position: relative;
         z-index: 2;
+        margin-left: 250px;
         display: flex;
         @include font(700, 16px, 21px);
         color: var(--white);
