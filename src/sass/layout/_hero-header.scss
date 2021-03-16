@@ -327,3 +327,45 @@
        z-index: 1;
    }
 }
+
+@media screen and (min-width: 1200px) {
+    .burger-menu-btn {
+        display: none;
+    }
+
+    .hero-header {
+        min-height: 665px;
+    }
+    .header {
+        margin-bottom: 84px;
+    }
+    .nav-list {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        @include font(700, 16px, 21px);
+        color: var(--white);
+    }
+
+    .nav-list-item {
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+        &:hover {
+            color: var(--main-pink-color);
+        }
+    }
+
+    .icecream-background {
+        width: 538px;
+        height: 538px;
+    }
+
+    .hero-title {
+        @include font(400, 38px, 44px, 0.04em);
+        width: 280px;
+        & .hero-title-text {
+            @include font(400, 58px, 53px, 0.04em);
+        }
+    }
+}
