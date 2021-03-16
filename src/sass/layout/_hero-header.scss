@@ -3,9 +3,8 @@
     background-color: var(--header-background);
     min-height: 502px;
     position: relative;
-    overflow-x: hidden;
-    overflow-y: inherit;
-}
+    overflow: hidden;
+}    
 
 .header {
     display: flex;
@@ -298,9 +297,26 @@
         }
     }
 
+    .header-btn {
+        display: flex;
+    }
+
     .icecream-background {
         width: 538px;
         height: 538px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-30%, -41%);
+    }
+
+    .icecream-img {
+        top: 56px;
+        left: 119px;
+        transition: transform var(--animation-duration) var(--animation-type);
+        &:hover,
+        &:focus {
+            transform: scale(1.10);
+        }
     }
 
     .hero-title {
@@ -311,6 +327,40 @@
         }
     }
 
+    .hero-links-list-link {
+        @include font (400, 14px, 18px);
+        border-radius: 20px;
+        min-height: 40px;
+        &.prod {
+        min-width: 104px;
+        margin-right: 8px;
+        }
+    
+        &.made {
+        min-width: 138px;
+        }
+    }
 
+    .tasty-header-image {
+        top: 82%;
+    }
 
+    .presentation-list {
+        transform: translate(0%, -10%);
+    }
+
+    .presentation-list-item {
+        @include font(400, 46px, 53px, 0.04em);
+        margin-bottom: 18px;
+        & p {
+            @include font(400, 14px, 18px);  
+        }
+    }
+
+    .presentation-list-decor {
+        width: 30px;
+        height: 30px;
+        top: -7px;
+        right: -15px;
+    }
 }
