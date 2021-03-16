@@ -44,6 +44,9 @@
   .container {
     width: 700px;
   }
+  .hero-header .container {
+    position: relative;
+  }
 }
 @media screen and (min-width: 1200px) {
   .container {
@@ -320,7 +323,6 @@ a {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 137px;
-  overflow: hidden;
 }
 
 .nav-list {
@@ -351,6 +353,72 @@ a {
 .burger-menu-btn-icon {
   width: 20px;
   height: 20px;
+}
+
+.mobile-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  padding-top: 123px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 10px;
+  width: 100%;
+  max-width: 250px;
+  height: 100%;
+  overflow: auto;
+  top: 0;
+  right: 0;
+  background-color: var(--mobile-menu-background);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+}
+
+.mobile-menu-close-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.mobile-menu-nav-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mobile-menu-nav-list-item {
+  display: flex;
+  padding-left: 21px;
+  height: 42px;
+  border: 1px solid #E18298;
+}
+.mobile-menu-nav-list-item :focus {
+  color: var(--main-pink-color);
+}
+
+.mobile-menu-nav-list-link {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.286;
+  letter-spacing: normal;
+  color: var(--white);
+  align-self: center;
 }
 
 .hero-title {
@@ -443,7 +511,7 @@ a {
   .header-btn {
     position: relative;
     display: flex;
-    z-index: 1;
+    z-index: 100;
   }
 
   .header-btn-icon {
@@ -485,6 +553,48 @@ a {
     margin-bottom: 19px;
   }
 
+  .presentation-list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-self: end;
+    top: 31%;
+    right: 0;
+    transform: translate(-25%, -50%);
+  }
+
+  .presentation-list-item {
+    position: relative;
+    z-index: 1;
+    font-family: var(--titan-font);
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.143;
+    letter-spacing: 0.04em;
+    color: var(--main-pink-color);
+    text-align: right;
+    word-wrap: normal;
+  }
+  .presentation-list-item > p {
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+    letter-spacing: normal;
+    color: var(--white);
+  }
+
+  .presentation-list-decor {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: -2px;
+    right: -10px;
+    z-index: -1;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+  }
+
   .manufacture {
     display: flex;
     justify-content: flex-start;
@@ -499,11 +609,12 @@ a {
 
   .manufacture-text {
     width: 114px;
+    margin-bottom: 7px;
     font-weight: 400;
     font-size: 8px;
     line-height: 1.5;
     letter-spacing: normal;
-    color: #FFFFFF;
+    color: var(--white);
   }
 
   .manufacture-wraper {
@@ -514,8 +625,16 @@ a {
   }
 
   .hero-round-btn {
+    display: flex;
+    align-items: center;
     width: 18px;
     height: 18px;
+    fill: var(--main-pink-color);
+  }
+
+  .hero-round-btn-icon {
+    width: 10px;
+    height: 10px;
   }
 
   .icecream-background {
@@ -529,6 +648,64 @@ a {
   .icecream-img {
     top: 32px;
     left: 71px;
+  }
+
+  .tasty-header-image {
+    display: block;
+    position: absolute;
+    top: 69%;
+    right: 0%;
+    z-index: 1;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .burger-menu-btn {
+    display: none;
+  }
+
+  .hero-header {
+    min-height: 665px;
+  }
+
+  .header {
+    margin-bottom: 84px;
+  }
+
+  .nav-list {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.313;
+    letter-spacing: normal;
+    color: var(--white);
+  }
+
+  .nav-list-item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .nav-list-item:hover {
+    color: var(--main-pink-color);
+  }
+
+  .icecream-background {
+    width: 538px;
+    height: 538px;
+  }
+
+  .hero-title {
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 1.158;
+    letter-spacing: 0.04em;
+    width: 280px;
+  }
+  .hero-title .hero-title-text {
+    font-weight: 400;
+    font-size: 58px;
+    line-height: 0.914;
+    letter-spacing: 0.04em;
   }
 }
 .icecream {
@@ -1160,6 +1337,8 @@ a {
 }
 
 .reviews-text {
+  position: relative;
+  z-index: 10;
   padding: 0 15px;
   font-weight: 500;
   font-size: 12px;
@@ -1175,8 +1354,9 @@ a {
   position: absolute;
   content: "";
   display: block;
-  top: 28px;
-  left: 61px;
+  top: -12px;
+  left: 17px;
+  z-index: -1;
   width: 54px;
   height: 40px;
   background-image: url(/quotes.4d7be276.svg);
@@ -1192,7 +1372,6 @@ a {
 }
 
 .reviews-wrapper {
-  position: relative;
   width: 280px;
   margin: 0 auto;
   background-color: var(--reviews-background);
@@ -1235,6 +1414,7 @@ a {
 
 .slick-dots {
   list-style: none;
+  font-size: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1260,6 +1440,91 @@ a {
   border-radius: 0;
 }
 
+@media screen and (min-width: 768px) {
+  .reviews {
+    padding-top: 119px;
+    padding-bottom: 119px;
+  }
+
+  .reviews-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2.143;
+    letter-spacing: normal;
+    width: 457px;
+    padding: 0;
+  }
+  .reviews-text::before {
+    top: -16px;
+    left: -25px;
+  }
+
+  .reviews-wrapper {
+    width: 620px;
+    padding-top: 47px;
+    padding-bottom: 28px;
+  }
+
+  .location-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: normal;
+  }
+  .location-text::before {
+    top: 24px;
+  }
+
+  .reviews-img {
+    margin-bottom: 19px;
+  }
+
+  .reviews-box {
+    padding-top: 42px;
+    padding-bottom: 35px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .reviews {
+    padding-top: 123px;
+    padding-bottom: 132px;
+  }
+
+  .reviews-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: normal;
+    width: 710px;
+    padding: 0 15px;
+  }
+  .reviews-text::before {
+    left: -10px;
+  }
+
+  .reviews-wrapper {
+    width: 926px;
+    padding-bottom: 32px;
+  }
+
+  .location-text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.85;
+    letter-spacing: normal;
+  }
+  .location-text::before {
+    top: 15px;
+  }
+
+  .reviews-img {
+    margin-bottom: 15px;
+  }
+
+  .reviews-box {
+    padding-top: 34px;
+  }
+}
 .contacts {
   position: relative;
   background-repeat: no-repeat;
