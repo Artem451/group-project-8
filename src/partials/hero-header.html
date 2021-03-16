@@ -32,8 +32,8 @@
         <h1 class="hero-title title">ice cream made with <span class="hero-title-text">passion</span></h1>
             
         <ul class="hero-links-list">
-            <li class="hero-links-list-item prod"><a href="#products" class="hero-links-list-link-product">Products</a></li>
-            <li class="hero-links-list-item made"><a href="#made" class="hero-links-list-link-made">How it's made?</a></li>
+            <li class="hero-links-list-item"><a href="#products" class="hero-links-list-link prod">Products</a></li>
+            <li class="hero-links-list-item"><a href="#made" class="hero-links-list-link made">How it's made?</a></li>
         </ul>
         <ul class="presentation-list">
             <li class="presentation-list-item">16
@@ -67,6 +67,23 @@
                 </button>
             </div>
         </div>
+        <div class="icecream-background">
+            <picture class="icecream-img">
+                <source srcset="./images/desktop/icecream-header-desktop@1x.webp 1x, ./images/desktop/icecream-header-desktop@2x.webp 2x"
+                media="(min-width: 1200px)" type="image/webp">
+                <source srcset="./images/desktop/icecream-header-desktop@1x.png 1x, ./images/desktop/icecream-header-desktop@2x.png 2x"
+                media="(min-width: 1200px)">
+                <source srcset="./images/tablet/icecream-header-desktop@1x.webp 1x, ./images/tablet/icecream-header-desktop@2x.webp 2x"
+                media="(min-width: 768px)" type="image/webp">
+                <source srcset="./images/tablet/icecream-header-desktop@1x.png 1x, ./images/tablet/icecream-header-desktop@2x.png 2x"
+                media="(min-width: 768px)">
+                <source srcset="./images/mobile/icecream-header-mobile@1x.webp 1x, ./images/mobile/icecream-header-mobile@2x.webp 2x"
+                media="(min-width: 320px)" type="image/webp">
+                <source srcset="./images/mobile/icecream-header-mobile@1x.png 1x, ./images/mobile/icecream-header-mobile@2x.png 2x"
+                media="(min-width: 320px)">
+                <img src="./images/mobile/icecream-header-mobile@1x.png" alt="">
+            </picture>
+        </div>
         <picture class="tasty-header-image">
             <source srcset="./images/desktop/tasty-header-desktop@1x.webp 1x, ./images/desktop/tasty-header-desktop@2x.webp 2x"
             media="(min-width: 1200px)" type="image/webp">
@@ -79,28 +96,15 @@
             <img src="./images/desktop/tasty-header-desktop@1x.png" alt="">
         </picture>   
     </div>
-    <div class="icecream-background">
-        <picture class="icecream-img">
-            <source srcset="./images/desktop/icecream-header-desktop@1x.webp 1x, ./images/desktop/icecream-header-desktop@2x.webp 2x"
-            media="(min-width: 1200px)" type="image/webp">
-            <source srcset="./images/desktop/icecream-header-desktop@1x.png 1x, ./images/desktop/icecream-header-desktop@2x.png 2x"
-            media="(min-width: 1200px)">
-            <source srcset="./images/tablet/icecream-header-desktop@1x.webp 1x, ./images/tablet/icecream-header-desktop@2x.webp 2x"
-            media="(min-width: 768px)" type="image/webp">
-            <source srcset="./images/tablet/icecream-header-desktop@1x.png 1x, ./images/tablet/icecream-header-desktop@2x.png 2x"
-            media="(min-width: 768px)">
-            <source srcset="./images/mobile/icecream-header-mobile@1x.webp 1x, ./images/mobile/icecream-header-mobile@2x.webp 2x"
-            media="(min-width: 320px)" type="image/webp">
-            <source srcset="./images/mobile/icecream-header-mobile@1x.png 1x, ./images/mobile/icecream-header-mobile@2x.png 2x"
-            media="(min-width: 320px)">
-            <img src="./images/mobile/icecream-header-mobile@1x.png" alt="">
-        </picture>
-    </div>
-    
     <div class="mobile-menu" data-menu>
         <button type="button" class="mobile-menu-close" data-menu-close>
             <svg class="mobile-menu-close-icon">
                 <use href="./images/sprite.svg#icon-close"></use>
+            </svg>
+        </button>
+        <button type="button" class="mobile-menu-btn">Buy now
+            <svg class="mobile-menu-btn-icon" width="10" height="10">
+                <use href="./images/sprite.svg#arrow-right-short"></use>
             </svg>
         </button>
         <ul class="mobile-menu-nav-list">
