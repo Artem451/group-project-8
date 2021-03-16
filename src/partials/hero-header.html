@@ -67,8 +67,17 @@
                 </button>
             </div>
         </div>
-        
-        <img src="./images/desktop/tasty-header-desktop@1x.png" alt="" class="tasty-header-image">   
+        <picture class="tasty-header-image">
+            <source srcset="./images/desktop/tasty-header-desktop@1x.webp 1x, ./images/desktop/tasty-header-desktop@2x.webp 2x"
+            media="(min-width: 1200px)" type="image/webp">
+            <source srcset="./images/desktop/tasty-header-desktop@1x.png 1x, ./images/desktop/tasty-header-desktop@2x.png 2x"
+            media="(min-width: 1200px)">  
+            <source srcset="./images/tablet/tasty-header-tablet@1x.webp 1x, ./images/tablet/tasty-header-tablet@2x.webp 2x"
+            media="(min-width: 768px)" type="image/webp">
+            <source srcset="./images/tablet/tasty-header-tablet@1x.png 1x, ./images/tablet/tasty-header-tablet@2x.png 2x"
+            media="(min-width: 768px)">
+            <img src="./images/desktop/tasty-header-desktop@1x.png" alt="">
+        </picture>   
     </div>
     <div class="icecream-background">
         <picture class="icecream-img">
