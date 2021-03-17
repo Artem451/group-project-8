@@ -409,10 +409,17 @@ a {
   min-width: 63px;
   margin-right: 8px;
 }
+.hero-links-list-link.prod:hover, .hero-links-list-link.prod:focus {
+  background-color: var(--accent-btn-color);
+  color: var(--main-pink-color);
+}
 .hero-links-list-link.made {
   background-color: var(--white);
   color: var(--main-pink-color);
   min-width: 82px;
+}
+.hero-links-list-link.made:hover, .hero-links-list-link.made:focus {
+  background-color: var(--accent-btn-color);
 }
 
 .hero-links-list-link-made {
