@@ -121,6 +121,11 @@
     position: absolute;
     left: 81px;
     top: 9px;
+    transition: transform var(--animation-duration) var(--animation-type);
+        &:hover,
+        &:focus {
+            transform: scale(1.10);
+        }
 }
 
 @media screen and (min-width: 768px) {
@@ -332,11 +337,7 @@
     .icecream-img {
         top: 56px;
         left: 119px;
-        transition: transform var(--animation-duration) var(--animation-type);
-        &:hover,
-        &:focus {
-            transform: scale(1.10);
-        }
+        
     }
 
     .hero-title {
