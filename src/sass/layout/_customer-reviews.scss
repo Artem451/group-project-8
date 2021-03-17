@@ -10,7 +10,7 @@
     @include font(500, 12px, 31px);
     color: var(--black);
     text-align: center;
-    width: 157px;
+    width: 187px;
     margin: 0 auto;
     background-image: repeating-linear-gradient(
     transparent,
@@ -159,7 +159,7 @@
 
   .reviews-text {
     @include font(500, 16px, 30px);
-    width: 710px;
+    width: 740px;
     padding: 0 15px;
 
     &::before {
