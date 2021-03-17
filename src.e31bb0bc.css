@@ -409,6 +409,7 @@ a {
   color: var(--white);
   min-width: 63px;
   margin-right: 8px;
+  transition: background-color var(--animation-duration) var(--animation-type), color var(--animation-duration) var(--animation-type);
 }
 .hero-links-list-link.prod:hover, .hero-links-list-link.prod:focus {
   background-color: var(--accent-btn-color);
@@ -418,6 +419,7 @@ a {
   background-color: var(--white);
   color: var(--main-pink-color);
   min-width: 82px;
+  transition: background-color var(--animation-duration) var(--animation-type);
 }
 .hero-links-list-link.made:hover, .hero-links-list-link.made:focus {
   background-color: var(--accent-btn-color);
@@ -449,6 +451,10 @@ a {
   position: absolute;
   left: 81px;
   top: 9px;
+  transition: transform var(--animation-duration) var(--animation-type);
+}
+.icecream-img:hover, .icecream-img:focus {
+  transform: scale(1.1);
 }
 
 @media screen and (min-width: 768px) {
@@ -466,6 +472,7 @@ a {
     position: relative;
     display: flex;
     z-index: 1;
+    transition: background-color var(--animation-duration) var(--animation-type);
   }
 
   .header-btn-icon {
@@ -648,6 +655,9 @@ a {
     color: var(--white);
   }
 
+  .nav-list-item {
+    transition: color var(--animation-duration) var(--animation-type);
+  }
   .nav-list-item:not(:last-child) {
     margin-right: 30px;
   }
@@ -670,10 +680,6 @@ a {
   .icecream-img {
     top: 56px;
     left: 119px;
-    transition: transform var(--animation-duration) var(--animation-type);
-  }
-  .icecream-img:hover, .icecream-img:focus {
-    transform: scale(1.1);
   }
 
   .hero-title {
@@ -1780,7 +1786,7 @@ a {
   letter-spacing: normal;
   color: var(--black);
   text-align: center;
-  width: 157px;
+  width: 187px;
   margin: 0 auto;
   background-image: repeating-linear-gradient(transparent, transparent 29px, #E1E1E1 29px, #E1E1E1 30px);
 }
@@ -1929,7 +1935,7 @@ a {
     font-size: 16px;
     line-height: 1.875;
     letter-spacing: normal;
-    width: 710px;
+    width: 740px;
     padding: 0 15px;
   }
   .reviews-text::before {
