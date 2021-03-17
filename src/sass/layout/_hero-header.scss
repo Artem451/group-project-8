@@ -79,10 +79,21 @@
     margin-right: 8px;
     }
 
+    &.prod:hover,
+    &.prod:focus {
+        background-color: var(--accent-btn-color);
+        color: var(--main-pink-color);
+    }
+
     &.made {
     background-color: var(--white);
     color: var(--main-pink-color);
     min-width: 82px;
+    }
+
+    &.made:hover,
+    &.made:focus {
+        background-color: var(--accent-btn-color);
     }
 }
 
