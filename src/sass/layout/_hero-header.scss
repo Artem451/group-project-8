@@ -241,6 +241,11 @@
        width: 18px;
        height: 18px;
        fill: var(--main-pink-color);
+       
+       &:hover,
+       &:focus {
+           background-color: var(--accent-btn-color);
+       }
    }
 
    .hero-round-btn-icon {
@@ -280,8 +285,6 @@
     .burger-menu-btn {
         display: none;
     }
-
-    
 
     .hero-header {
         min-height: 665px;
