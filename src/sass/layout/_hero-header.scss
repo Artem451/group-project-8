@@ -77,6 +77,8 @@
     color: var(--white);
     min-width: 63px;
     margin-right: 8px;
+    transition: background-color var(--animation-duration) var(--animation-type), 
+                color var(--animation-duration) var(--animation-type);
     }
 
     &.prod:hover,
@@ -89,6 +91,7 @@
     background-color: var(--white);
     color: var(--main-pink-color);
     min-width: 82px;
+    transition: background-color var(--animation-duration) var(--animation-type);
     }
 
     &.made:hover,
@@ -142,6 +145,7 @@
         position: relative;
         display: flex;
         z-index: 1;
+        transition: background-color var(--animation-duration) var(--animation-type);
     }
 
     .header-btn-icon {
@@ -313,6 +317,7 @@
     }
 
     .nav-list-item {
+        transition: color var(--animation-duration) var(--animation-type);
         &:not(:last-child) {
             margin-right: 30px;
         }
